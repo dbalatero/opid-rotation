@@ -1,0 +1,10 @@
+%h1 Operation ID Meeting Rotation
+
+%h2 For the meeting in #{@days_until_sunday} days on #{@meeting_day.strftime("%B %d, %Y")}
+
+%ul
+  %li Meeting Chair: #{@names[@chair_index % 5]}
+  %li Week Off: #{@names[(@chair_index - 1) % 5]}
+  %li Fundraiser: #{@names[(@chair_index - 2) % 5]}
+  %li Project(er): #{@names[(@chair_index - 3) % 5]}
+  %li Blogger: #{@names[(@chair_index - 4) % 5]}
